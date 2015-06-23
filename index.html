@@ -20,7 +20,7 @@
     </div>
     <div id="game1" >
         <p>Press to play a simple game!</p>
-        <button onclick="myFunction()">Click me!</button>
+        <button onclick="myFunction()">Game</button>
         <p id="output" ></p>
         <script>
             function myFunction() {  
@@ -57,6 +57,25 @@
 
         }
         </script>
+    </div>
+    <div id="game2">
+        <p>Press to display a square!</p>
+        <button onclick="myOtherFunction()">Square</button><button onclick="removeSquare()">Remove Square</button>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;" hidden="true">
+        <script>
+            function myOtherFunction() {
+                var square = document.getElementById("myCanvas")
+                var ctx = square.getContext("2d")
+                ctx.fillStyle = "#a58744"
+                square.setAttribute("hidden","false")
+            }
+            function removeSquare() {
+                var square = document.getElementById("myCanvas")
+                square.setAttribute("hidden","true")
+            }
+        </script>
+
+
     </div>
     
     
