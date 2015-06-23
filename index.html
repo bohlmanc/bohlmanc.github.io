@@ -21,6 +21,7 @@
     <div id="game1" >
         <p>Press to play a simple game!</p>
         <button onclick="myFunction()">Click me!</button>
+        <p id="output" ></p>
         <script>
             function myFunction() {  
                 var willPlay = confirm("Would you like to play?")
@@ -30,7 +31,7 @@
                 var string = "";
                 if(age < 13) {
                     string = age;
-                    document.write(string)
+                    document.getElementById("output").innerHTML += "You are " + age + "\n"
                 }
                 else {
                     document.write("No age specified")
@@ -38,7 +39,7 @@
                 
                 var userAnswer = prompt("Do you want to race Bieber on stage?")
                 if(prompt === "yes"){
-                    document.write("You raced Bieber!")
+                    document.getElementById("output").innerHTML += "You raced Bieber!" + "\n"
                 }
                 else {
                     document.write("You did not race Bieber..")
@@ -46,10 +47,10 @@
 
                 var feedback = prompt("How would you rate this game? (Out of 10)")
                 if(feedback > 8) {
-                    document.write("Thanks!")
+                    document.getElementById("output").innerHTML += "\n\nThanks for playing!"
                 }
                 else {
-                    document.write("Ok, I'll keep working on it!")
+                    document.getElementById("output").innerHTML += "\n\nOk, I'll keep working on it!"
                 }
             }
 
