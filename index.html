@@ -24,6 +24,7 @@
         <p id="output" ></p>
         <script>
             function myFunction() {  
+                document.getElementById("output").innerHTML = ""
                 var willPlay = confirm("Would you like to play?")
 
             if( willPlay) {
@@ -42,7 +43,6 @@
                     document.getElementById("output").innerHTML += "You raced Bieber!" + "\n"
                 }
                 else {
-                    //document.write("You did not race Bieber..")
                 }
 
                 var feedback = prompt("How would you rate this game? (Out of 10)")
@@ -52,6 +52,7 @@
                 else {
                     document.getElementById("output").innerHTML += "\n\nOk, I'll keep working on it!"
                 }
+                
             }
 
         }
