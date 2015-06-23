@@ -21,4 +21,5 @@ p {
 
 html {
     cursor: crosshair;
+    pointer-events: stroke;
 }
