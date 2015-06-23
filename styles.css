@@ -1,11 +1,12 @@
 #leftBox {
-    background-color: "#bebebe";
+    background-color: "#bebebe" !important;
     height: 100%;
     width: 75px;
+    float: left;
 }
 
 #header {
-    text-color: "#eeeeee";
+    text-color: "#eeeeee" !important;
     text-decoration: none;
     width: 100%;
     height: 100px;
