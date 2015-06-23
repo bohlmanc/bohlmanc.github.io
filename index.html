@@ -30,13 +30,7 @@
             if( willPlay) {
                 var age = prompt("Ok, what's your age?")
                 var string = "";
-                if(age < 13) {
-                    string = age;
-                    document.getElementById("output").innerHTML += "You are " + age + "\n"
-                }
-                else {
-                    //document.write("No age specified")
-                }
+                document.getElementById("output").innerHTML += "You are " + age + "\n"
                 
                 var userAnswer = prompt("Do you want to race Bieber on stage?")
                 if(prompt === "yes"){
@@ -61,17 +55,16 @@
     <div id="game2">
         <p>Press to display a square!</p>
         <button onclick="myOtherFunction()">Square</button><button onclick="removeSquare()">Remove Square</button>
-        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;" hidden="true">
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;" visibility="invisible">
         <script>
             function myOtherFunction() {
                 var square = document.getElementById("myCanvas")
-                var ctx = square.getContext("2d")
-                ctx.fillStyle = "#a58744"
-                square.setAttribute("hidden","false")
+                square.style.background = "#a58744"
             }
             function removeSquare() {
                 var square = document.getElementById("myCanvas")
-                square.setAttribute("hidden","true")
+                square.style.background = "#eeeeee"
+                square.style.visibility = "invisible"
             }
         </script>
 
