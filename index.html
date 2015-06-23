@@ -55,11 +55,12 @@
     <div id="game2">
         <p>Press to display a square!</p>
         <button onclick="myOtherFunction()">Square</button><button onclick="removeSquare()">Remove Square</button>
-        <canvas id="myCanvas" width="100" height="100" style="border:1px solid #000000;" visibility="invisible">
+        <canvas id="myCanvas" width="500" height="500"  visibility="invisible">
         <script>
             function myOtherFunction() {
                 var square = document.getElementById("myCanvas")
                 square.style.background = "#a58744"
+                square.style.visibility = "visible"
             }
             function removeSquare() {
                 var square = document.getElementById("myCanvas")
