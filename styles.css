@@ -18,3 +18,7 @@ p {
     font-family: "Arial";
     font-size: 20px;
 }
+
+body {
+    cursor: crosshair;
+}
