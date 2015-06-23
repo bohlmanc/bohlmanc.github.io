@@ -1,7 +1,7 @@
 #leftBox {
     background-color: #bebebe !important;
     height: 100%;
-    width: 75px;
+    width: 100px;
     float: left;
 }
 
@@ -10,6 +10,7 @@
     text-decoration: none;
     width: 100%;
     height: 100px;
+    text-align: center;
 }
 
 p {
