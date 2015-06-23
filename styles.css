@@ -1,10 +1,10 @@
-#leftBox {
+.leftBox {
     background-color: "#bebebe";
     height: 100%;
     width: 75px;
 }
 
-#header {
+.header {
     text-color: "#eeeeee";
     text-decoration: none;
     width: 100%;
