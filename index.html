@@ -18,6 +18,43 @@
     
         </div>
     </div>
+    <div id="game1" >
+        <p>Press to play a simple game!</p>
+        <button type="button" name="game1" onclick="playGame()">Click me!</button>
+        <script lang="text/javascript">
+        function playGame() {
+            var willPlay = confirm("Would you like to play?")
+
+            if( willPlay) {
+                var age = prompt("Ok, what's your age?")
+                if(age < 13) {
+                    console.log("Ok, you may play, but I take no responsibility")
+                }
+                else {
+                    console.log("Awesome! Let's get right to it!")
+                }
+                console.log("You are at a Justin Bieber concert, and you hear this lyric 'Lace my shoes off, start racing.'")
+                console.log("Suddenly, Bieber stops and says, 'Who wants to race me?'")
+                var userAnswer = prompt("Do you want to race Bieber on stage?")
+                if(prompt === "yes"){
+                    console.log("You and Bieber start racing. It's neck and neck! You win by a shoelace!")
+                }
+                else {
+                    console.log("Oh no! Bieber shakes his head and sings 'I set a pace, so I can race without pacing.'")
+                }
+
+                var feedback = prompt("How would you rate this game? (Out of 10)")
+                if(feedback > 8) {
+                    console.log("Thank you! We should race at the next concert!")
+                }
+                else {
+                    console.log("I'll keep practicing coding and racing.")
+                }
+
+            }
+        </script>
+    </div>
+    
     
     
 </body>
