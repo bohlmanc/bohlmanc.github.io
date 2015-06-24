@@ -54,26 +54,29 @@
     </div>
     <div id="game2">
         <button onclick="myOtherFunction()">Square</button><button onclick="removeSquare()">Remove Square</button>
-        <canvas id="myCanvas" width="0" height="0"  visibility="invisible">
+        <canvas id="myCanvas" width="200" height="200"  visibility="invisible">
         <p>Press to display a square!</p>
         <script>
             function myOtherFunction() {
                 var square = document.getElementById("myCanvas")
                 square.style.background = "#a58744"
                 square.style.visibility = "visible"
-                square.style.height = "200"
-                square.style.width = "200"
+                //square.style.height = "200"
+                //square.style.width = "200"
             }
             function removeSquare() {
                 var square = document.getElementById("myCanvas")
                 square.style.background = "#eeeeee"
                 square.style.visibility = "invisible"
-                square.style.height = "0"
-                square.style.width = "0"
+                //square.style.height = "0"
+                //square.style.width = "0"
             }
         </script>
 
 
+    </div>
+    <div id="game3">
+ 
     </div>
     
     
