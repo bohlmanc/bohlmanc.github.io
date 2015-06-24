@@ -23,3 +23,18 @@ html {
     cursor: crosshair;
     pointer-events: stroke;
 }
+
+#myCanvas {
+    margin-left: 50px;
+    margin-bottom: -50px;
+    outline-color: white;
+}
+
+#game {
+    margin-left: 27%;
+    margin-top: 100px;
+}
+
+#gameButton {
+    margin-left: 40%;
+}

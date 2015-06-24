@@ -53,21 +53,25 @@
         </script>
     </div>
     <div id="game2">
+        <!-- Width:  <input type="text" name="Width" value="hi"><br>
+        Height: <input type="text" name="Height" value="hi"><br> -->
         <button onclick="myOtherFunction()">Square</button><button onclick="removeSquare()">Remove Square</button>
-        <canvas id="myCanvas" width="200" height="200"  visibility="invisible">
+        <canvas id="myCanvas" height="100" width="100" visibility="invisible">
+        
         <p>Press to display a square!</p>
         <script>
             function myOtherFunction() {
-                var square = document.getElementById("myCanvas")
-                square.style.background = "#a58744"
-                square.style.visibility = "visible"
+                var square = document.getElementById("myCanvas");
+                square.style.background = "#a58744";
+                square.style.visibility = "visible";
+                
                 //square.style.height = "200"
                 //square.style.width = "200"
             }
             function removeSquare() {
-                var square = document.getElementById("myCanvas")
-                square.style.background = "#eeeeee"
-                square.style.visibility = "invisible"
+                var square = document.getElementById("myCanvas");
+                square.style.background = "#fffffe";
+                square.style.visibility = "invisible";
                 //square.style.height = "0"
                 //square.style.width = "0"
             }
@@ -76,7 +80,28 @@
 
     </div>
     <div id="game3">
- 
+        <button id="gameButton" onclick="playGame()">Cool Game!</button>
+        <canvas id="game" height="300" width="600" backgroundColor="#fffffe"></canvas>
+        <script>
+            function playGame() {
+                var gameBoard = document.getElementById("game");
+                if(gameBoard.getAttribute("backgroundColor") === "#fffffe") {
+                    //confirm("Changing color ");
+                    gameBoard.setAttribute("backgroundColor","#aaaaaa");   
+                    gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
+
+                }
+                else {
+                    //confirm("Other color");
+                    gameBoard.setAttribute("backgroundColor","#fffffe"); 
+                    gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
+
+                }
+            }
+        
+        
+        
+        </script>
     </div>
     
     
