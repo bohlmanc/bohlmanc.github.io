@@ -1,4 +1,4 @@
-
+<!-- Created by Cody Bohlman, all rights reserved -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,22 +13,18 @@
         <div id="menuBar">
             <ul>
                 <li class><a href="#">Home</a></li>
-                <li class><a href="http://github.com/bohlmanc" target="blank">Github</a></li>
-                <li class><a href="http://bitbucket.org/bohlmanc" target="blank">Bitbucket</a></li>
-                <li class><a href="https://www.linkedin.com/profile/view?id=311252668&trk=hp-identity-name" target="blank">LinkedIn</a></li>
+                <li class><a href="http://github.com/bohlmanc" target="_blank">Github</a></li>
+                <li class><a href="http://bitbucket.org/bohlmanc" target="_blank">Bitbucket</a></li>
+                <li class><a href="https://www.linkedin.com/profile/view?id=311252668&trk=hp-identity-name" target="_blank">LinkedIn</a></li>
             </ul>
-            
-            
         </div>
     </div>
     <div id="game1" >
         <p>Press to play a simple game!</p>
-        <button onclick="myFunction()">Game</button><button onclick="clearText()">Clear Text</button>
+        <input type="button" onclick="myFunction()" value="Play"><input type="button" onclick="clearText()" value="Clear">
         <p id="output" ></p>
     </div>
     <div id="game2">
-        <!-- Width:  <input type="text" name="Width" value="hi"><br>
-        Height: <input type="text" name="Height" value="hi"><br> -->
         <button onclick="myOtherFunction()">Square</button><button onclick="removeSquare()">Remove Square</button>
         <canvas id="myCanvas" height="100" width="100" visibility="invisible">
     </div>

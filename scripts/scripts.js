@@ -31,26 +31,26 @@ function clearText() {
 
 function myOtherFunction() {
     var square = document.getElementById("myCanvas");
-    square.style.background = "#a58744";
+    square.style.background = "blue";
     square.style.visibility = "visible";
 }
 function removeSquare() {
     var square = document.getElementById("myCanvas");
-    square.style.background = "#fffffe";
+    square.style.background = "gray";
     square.style.visibility = "invisible";
 }
 
 function playGame() {
     var gameBoard = document.getElementById("game");
-    if(gameBoard.getAttribute("backgroundColor") === "#fffffe") {
+    if(gameBoard.getAttribute("backgroundColor") === "gray") {
         //confirm("Changing color ");
-        gameBoard.setAttribute("backgroundColor","#aaaaaa");   
+        gameBoard.setAttribute("backgroundColor","yellow");   
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
 
     }
     else {
         //confirm("Other color");
-        gameBoard.setAttribute("backgroundColor","#fffffe"); 
+        gameBoard.setAttribute("backgroundColor","gray"); 
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
 
     }

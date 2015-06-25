@@ -16,6 +16,10 @@ li {
     display: inline;
 }
 
+html {
+    background-color: black;
+}
+
 li < a {
     padding-left: 10px;
     padding-right: 10px;
@@ -37,6 +41,7 @@ li < a {
 p {
     font-family: "Arial";
     font-size: 20px;
+    color: white;
 }
 
 #myCanvas {
@@ -52,4 +57,12 @@ p {
 
 #gameButton {
     margin-left: 40%;
+}
+
+button {
+    webkit-appearance: caret;   
+    background-color: aqua;
+    border-color: cadetblue;
+    padding-left: 3px;
+    padding-right: 3px;
 }
