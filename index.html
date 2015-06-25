@@ -1,12 +1,14 @@
 <!-- Created by Cody Bohlman, all rights reserved -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Cody Bohlman's Website</title>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <script src=" scripts/scripts.js"></script> 
-    </head>
+
+<head>
+    <title>Cody Bohlman's Website</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src=" scripts/scripts.js"></script>
+</head>
 <h2>Cody's Website</h2>
+
 <body>
     <div id="header">
         <h2>Welcome! Feel free to look around!</h2>
@@ -19,18 +21,37 @@
             </ul>
         </div>
     </div>
-    <div id="game1" >
+    <div id="game1">
         <p>Press to play a simple game!</p>
-        <input type="button" onclick="myFunction()" value="Play"><input type="button" onclick="clearText()" value="Clear">
-        <p id="output" ></p>
+        <input type="button" onclick="myFunction()" value="Play">
+        <input type="button" onclick="clearText()" value="Clear">
+        <p id="output"></p>
     </div>
     <div id="game2">
-        <button onclick="myOtherFunction()">Square</button><button onclick="removeSquare()">Remove Square</button>
+        <button onclick="myOtherFunction()">Square</button>
+        <button onclick="removeSquare()">Remove Square</button>
         <canvas id="myCanvas" height="100" width="100" visibility="invisible">
     </div>
     <div id="game3">
         <button id="gameButton" onclick="playGame()">Toggle Rectangle</button>
         <canvas id="game" height="300" width="600" backgroundColor="#fffffe"></canvas>
     </div>
+    <table id="scores" onmouseover="animate()" style="width:50%,height:100px">
+        <tr>
+            <td>Who</td>
+            <br>
+            <td>Cody</td>
+            <td>Mom</td>
+            <td>Dad</td>
+        </tr>
+        <tr>
+            <td>Hours</td>
+            <br>
+            <td>8</td>
+            <td>10</td>
+            <td>12</td>
+        </tr>
+    </table>
 </body>
+
 </html>

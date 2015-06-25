@@ -1,9 +1,7 @@
-
 #header > h2 {
     text-align: center;
     color: brown;
 }
-
 ul {
     float: left;
     width: 100%;
@@ -11,25 +9,20 @@ ul {
     margin: 0;
     list-style-type: none;
 }
-
 li {
     display: inline;
 }
-
 html {
-    background-color: black;
+    background-color: dimgray;
 }
-
 li < a {
     padding-left: 10px;
     padding-right: 10px;
 }
-
 #menuBar > ul > li {
-    padding-right: 10px;   
-    padding-left: 10px; 
+    padding-right: 10px;
+    padding-left: 10px;
 }
-
 #header {
     background-color: antiquewhite !important;
     text-decoration: none;
@@ -37,32 +30,31 @@ li < a {
     height: 70px;
     text-align: center;
 }
-
 p {
     font-family: "Arial";
     font-size: 20px;
     color: white;
 }
-
 #myCanvas {
     margin-left: 50px;
     margin-bottom: -50px;
     outline-color: white;
 }
-
 #game {
     margin-left: 27%;
     margin-top: 100px;
 }
-
 #gameButton {
     margin-left: 40%;
 }
-
 button {
-    webkit-appearance: caret;   
     background-color: aqua;
     border-color: cadetblue;
     padding-left: 3px;
     padding-right: 3px;
+}
+table,
+th,
+td {
+    border: 1px solid black;
 }

@@ -36,13 +36,13 @@ function myOtherFunction() {
 }
 function removeSquare() {
     var square = document.getElementById("myCanvas");
-    square.style.background = "gray";
+    square.style.background = "dimgray";
     square.style.visibility = "invisible";
 }
 
 function playGame() {
     var gameBoard = document.getElementById("game");
-    if(gameBoard.getAttribute("backgroundColor") === "gray") {
+    if(gameBoard.getAttribute("backgroundColor") === "dimgray") {
         //confirm("Changing color ");
         gameBoard.setAttribute("backgroundColor","yellow");   
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
@@ -50,7 +50,7 @@ function playGame() {
     }
     else {
         //confirm("Other color");
-        gameBoard.setAttribute("backgroundColor","gray"); 
+        gameBoard.setAttribute("backgroundColor","dimgray"); 
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
 
     }
