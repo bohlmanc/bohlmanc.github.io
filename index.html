@@ -32,19 +32,13 @@
         <button onclick="removeSquare()">Remove Square</button>
         <canvas id="myCanvas" height="100" width="100" visibility="invisible">
     </div>
-    <!-- <div id="game3">
-        <button id="gameButton" onclick="playGame()">Toggle Rectangle</button>
-        <canvas id="game" height="300" width="600" backgroundColor="#fffffe"></canvas>
-    </div> -->
+        <p id="test" style="color:white">Sample Text</p>
+        <button onclick="showCodyHours()">Cody's Hours</button>
+        <button onclick="showDadHours()">Dad's Hours</button>
+        <button onclick="showMomHours()">Mom's Hours</button>
+        <button onclick="clearHours()">Clear Hours</button>
     <table id="scores" onmouseover="animate()" style="width:50%,height:100px">
-        <tr>
-            <td onclick="hello()">Who</td>
-            </br>
-            <td>Cody</td>
-            <td>Mom</td>
-            <td>Dad</td>
-        </tr>
-        <tr>
+        <tr id="curUser">
             <td>Hours</td>
             </br>
             <td>8</td>
@@ -52,6 +46,8 @@
             <td>12</td>
         </tr>
     </table>
+    <button onclick="addCell()">Add Cell</button>
+
 </body>
 
 </html>

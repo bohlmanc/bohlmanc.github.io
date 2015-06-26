@@ -30,11 +30,7 @@ li < a {
     height: 70px;
     text-align: center;
 }
-p {
-    font-family: "Arial";
-    font-size: 20px;
-    color: white;
-}
+
 #myCanvas {
     margin-left: 50px;
     margin-bottom: -50px;
@@ -62,4 +58,13 @@ td {
 #scores {
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid black;
+}
+
+#test {
+    text-align: center;   
+}
+
+p {
+    font-size: 20pt;
 }
