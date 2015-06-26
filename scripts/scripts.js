@@ -1,34 +1,3 @@
-function myFunction() {  
-    document.getElementById("output").innerHTML = ""
-    var willPlay = confirm("Would you like to play?")
-
-    if( willPlay) {
-        var age = prompt("Ok, what's your age?")
-        var string = "";
-        document.getElementById("output").innerHTML += "You are " + age + "\n"
-
-        var userAnswer = prompt("Do you want to race Bieber on stage?")
-        if(prompt === "yes"){
-            document.getElementById("output").innerHTML += "You raced Bieber!" + "\n"
-        }
-        else {
-        }
-
-        var feedback = prompt("How would you rate this game? (Out of 10)")
-        if(feedback > 8) {
-            document.getElementById("output").innerHTML += "\n\nThanks for playing!"
-        }
-        else {
-            document.getElementById("output").innerHTML += "\n\nOk, I'll keep working on it!"
-        }
-
-    }
-}
-        
-function clearText() {
-    document.getElementById("output").innerHTML = "";
-}
-
 function myOtherFunction() {
     var square = document.getElementById("myCanvas");
     square.style.background = "blue";
@@ -60,9 +29,11 @@ function hello() {
     confirm("You pressed the table!");   
 }
 
-var codyHours = [1,2,3,4,5,6,7,8,9,10];
-var momHours = [10,9,8,7,6,5,4,3,2,1];
-var dadHours = [5,5,5,5,5,5,5,5,5,5];
+var data = {
+    codyHours: [1,2,3,4,5,6,7,8,9,10],
+    momHours: [10,9,8,7,6,5,4,3,2,1],
+    dadHours: [5,5,5,5,5,5,5,5,5,5]
+};
 
 function addCell() {
     var user = document.getElementById("curUser");
@@ -85,9 +56,9 @@ function showCodyHours() {
     var p = document.getElementById("test");
     p.innerHTML = "Cody's Hours";
     p.setAttribute("style","color:white");
-    for(var i = 0;i<codyHours.length;i++) {
+    for(var i = 0;i<data.codyHours.length;i++) {
         var newTd = document.createElement("td");
-        newTd.innerHTML += codyHours[i];
+        newTd.innerHTML += data.codyHours[i];
         codyTr.appendChild(newTd);
     }
     codyTr.setAttribute("id","curUser");
@@ -103,9 +74,9 @@ function showMomHours() {
     var p = document.getElementById("test");
     p.innerHTML = "Mom's Hours";
     p.setAttribute("style","color:white");
-    for(var i = 0;i<momHours.length;i++) {
+    for(var i = 0;i<data.momHours.length;i++) {
         var newTd = document.createElement("td");
-        newTd.innerHTML += momHours[i];
+        newTd.innerHTML += data.momHours[i];
         momTr.appendChild(newTd);
     }
     momTr.setAttribute("id","curUser");
@@ -121,9 +92,9 @@ function showDadHours() {
     var p = document.getElementById("test");
     p.innerHTML = "Dad's Hours";
     p.setAttribute("style","color:white");
-    for(var i = 0;i<dadHours.length;i++) {
+    for(var i = 0;i<data.dadHours.length;i++) {
         var newTd = document.createElement("td");
-        newTd.innerHTML += dadHours[i];
+        newTd.innerHTML += data.dadHours[i];
         dadTr.appendChild(newTd);
     }
     dadTr.setAttribute("id","curUser");
