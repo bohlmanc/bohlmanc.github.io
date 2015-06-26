@@ -55,3 +55,7 @@ function playGame() {
 
     }
 }
+
+function hello() {
+    confirm("You pressed the table!");   
+}

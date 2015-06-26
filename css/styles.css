@@ -58,3 +58,8 @@ th,
 td {
     border: 1px solid black;
 }
+
+#scores {
+    margin-left: auto;
+    margin-right: auto;
+}
