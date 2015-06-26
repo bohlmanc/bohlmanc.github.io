@@ -46,7 +46,7 @@ function addCell() {
     newCell.innerHTML = numHours;
     newChild.appendChild(newCell);
     user.appendChild(newChild);
-    
+    //data[name].append(numHours);
 }
 
 function showCodyHours() {
