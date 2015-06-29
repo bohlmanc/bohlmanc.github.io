@@ -13,12 +13,10 @@ function removeSquare() {
 function playGame() {
     var gameBoard = document.getElementById("game");
     if (gameBoard.getAttribute("backgroundColor") === "dimgray") {
-        //confirm("Changing color ");
         gameBoard.setAttribute("backgroundColor", "yellow");
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
 
     } else {
-        //confirm("Other color");
         gameBoard.setAttribute("backgroundColor", "dimgray");
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
 
@@ -44,6 +42,8 @@ function addCell() {
     p.setAttribute("style", "color:#32CD32");
     newChild.setAttribute("id", "cell" + nextNum + "");
     newChild.setAttribute("onclick", "removeCell(cell" + nextNum + ")");
+    newChild.setAttribute("onmouseover", "myanimate(true,cell" + nextNum + ")");
+    newChild.setAttribute("onmouseout", "myanimate(false,cell" + nextNum + ")");
     p.innerHTML = "HOURS ADDED";
     newChild.innerHTML = numHours;
     user.appendChild(newChild);
@@ -61,6 +61,8 @@ function showCodyHours() {
         newTd.innerHTML += data.codyHours[i];
         newTd.setAttribute("id", "cell" + i + "");
         newTd.setAttribute("onclick", "removeCell(cell" + i + ")");
+        newTd.setAttribute("onmouseover", "myanimate(true,cell" + i + ")");
+        newTd.setAttribute("onmouseout", "myanimate(false,cell" + i + ")");
         codyTr.appendChild(newTd);
     }
     codyTr.setAttribute("id", "curUser");
@@ -81,6 +83,8 @@ function showMomHours() {
         newTd.innerHTML += data.momHours[i];
         newTd.setAttribute("id", "cell" + i + "");
         newTd.setAttribute("onclick", "removeCell(cell" + i + ")");
+        newTd.setAttribute("onmouseover", "myanimate(true,cell" + i + ")");
+        newTd.setAttribute("onmouseout", "myanimate(false,cell" + i + ")");
         momTr.appendChild(newTd);
     }
     momTr.setAttribute("id", "curUser");
@@ -101,6 +105,8 @@ function showDadHours() {
         newTd.innerHTML += data.dadHours[i];
         newTd.setAttribute("id", "cell" + i + "");
         newTd.setAttribute("onclick", "removeCell(cell" + i + ")");
+        newTd.setAttribute("onmouseover", "myanimate(true,cell" + i + ")");
+        newTd.setAttribute("onmouseout", "myanimate(false,cell" + i + ")");
         dadTr.appendChild(newTd);
     }
     dadTr.setAttribute("id", "curUser");
@@ -121,4 +127,13 @@ function clearHours() {
 function removeCell(id) {
     var table = document.getElementById("curUser");
     table.removeChild(id);
+}
+
+function myanimate(bool, id) {
+    var table = document.getElementById("scores");
+    if (bool) {
+        id.setAttribute("style", "background-color: red");
+    } else {
+        id.setAttribute("style", "background-color: dimgray");
+    }
 }

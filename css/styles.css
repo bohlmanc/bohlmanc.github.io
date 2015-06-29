@@ -30,7 +30,6 @@ li < a {
     height: 70px;
     text-align: center;
 }
-
 #myCanvas {
     margin-left: 50px;
     margin-bottom: -50px;
@@ -53,21 +52,17 @@ table,
 th,
 td {
     border: 1px solid black;
-    border-collapse: collapse;
     padding-left: 4px;
     padding-right: 4px;
 }
-
 #scores {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
 }
-
 #test {
-    text-align: center;   
+    text-align: center;
 }
-
 p {
     font-size: 20pt;
 }
