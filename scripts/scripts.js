@@ -3,6 +3,7 @@ function myOtherFunction() {
     square.style.background = "blue";
     square.style.visibility = "visible";
 }
+
 function removeSquare() {
     var square = document.getElementById("myCanvas");
     square.style.background = "dimgray";
@@ -11,42 +12,41 @@ function removeSquare() {
 
 function playGame() {
     var gameBoard = document.getElementById("game");
-    if(gameBoard.getAttribute("backgroundColor") === "dimgray") {
+    if (gameBoard.getAttribute("backgroundColor") === "dimgray") {
         //confirm("Changing color ");
-        gameBoard.setAttribute("backgroundColor","yellow");   
+        gameBoard.setAttribute("backgroundColor", "yellow");
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
 
-    }
-    else {
+    } else {
         //confirm("Other color");
-        gameBoard.setAttribute("backgroundColor","dimgray"); 
+        gameBoard.setAttribute("backgroundColor", "dimgray");
         gameBoard.style.backgroundColor = gameBoard.getAttribute("backgroundColor");
 
     }
 }
 
-function hello() {
-    confirm("You pressed the table!");   
+function hello(num) {
+    confirm("" + num + " hours!");
 }
 
 var data = {
-    codyHours: [1,2,3,4,5,6,7,8,9,10],
-    momHours: [10,9,8,7,6,5,4,3,2,1],
-    dadHours: [5,5,5,5,5,5,5,5,5,5]
+    codyHours: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    momHours: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+    dadHours: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
 };
 
 function addCell() {
     var user = document.getElementById("curUser");
     var newChild = document.createElement("td");
-    var newCell = document.createElement("tr");
     var numHours = parseInt(prompt("Enter the number of hours"));
     var p = document.getElementById("test");
-    p.setAttribute("style","color:#32CD32");
+    var nextNum = user.childElementCount;
+    p.setAttribute("style", "color:#32CD32");
+    newChild.setAttribute("id", "cell" + nextNum + "");
+    newChild.setAttribute("onclick", "removeCell(cell" + nextNum + ")");
     p.innerHTML = "HOURS ADDED";
-    newCell.innerHTML = numHours;
-    newChild.appendChild(newCell);
+    newChild.innerHTML = numHours;
     user.appendChild(newChild);
-    //data[name].append(numHours);
 }
 
 function showCodyHours() {
@@ -55,13 +55,15 @@ function showCodyHours() {
     var codyTr = document.createElement("tr");
     var p = document.getElementById("test");
     p.innerHTML = "Cody's Hours";
-    p.setAttribute("style","color:white");
-    for(var i = 0;i<data.codyHours.length;i++) {
+    p.setAttribute("style", "color:white");
+    for (var i = 0; i < data.codyHours.length; i++) {
         var newTd = document.createElement("td");
         newTd.innerHTML += data.codyHours[i];
+        newTd.setAttribute("id", "cell" + i + "");
+        newTd.setAttribute("onclick", "removeCell(cell" + i + ")");
         codyTr.appendChild(newTd);
     }
-    codyTr.setAttribute("id","curUser");
+    codyTr.setAttribute("id", "curUser");
     table.appendChild(codyTr);
 }
 
@@ -73,13 +75,15 @@ function showMomHours() {
     var momTr = document.createElement("tr");
     var p = document.getElementById("test");
     p.innerHTML = "Mom's Hours";
-    p.setAttribute("style","color:white");
-    for(var i = 0;i<data.momHours.length;i++) {
+    p.setAttribute("style", "color:white");
+    for (var i = 0; i < data.momHours.length; i++) {
         var newTd = document.createElement("td");
         newTd.innerHTML += data.momHours[i];
+        newTd.setAttribute("id", "cell" + i + "");
+        newTd.setAttribute("onclick", "removeCell(cell" + i + ")");
         momTr.appendChild(newTd);
     }
-    momTr.setAttribute("id","curUser");
+    momTr.setAttribute("id", "curUser");
     table.appendChild(momTr);
 }
 
@@ -91,13 +95,15 @@ function showDadHours() {
     var dadTr = document.createElement("tr");
     var p = document.getElementById("test");
     p.innerHTML = "Dad's Hours";
-    p.setAttribute("style","color:white");
-    for(var i = 0;i<data.dadHours.length;i++) {
+    p.setAttribute("style", "color:white");
+    for (var i = 0; i < data.dadHours.length; i++) {
         var newTd = document.createElement("td");
         newTd.innerHTML += data.dadHours[i];
+        newTd.setAttribute("id", "cell" + i + "");
+        newTd.setAttribute("onclick", "removeCell(cell" + i + ")");
         dadTr.appendChild(newTd);
     }
-    dadTr.setAttribute("id","curUser");
+    dadTr.setAttribute("id", "curUser");
     table.appendChild(dadTr);
 }
 
@@ -109,5 +115,10 @@ function clearHours() {
     table.appendChild(label);
     var p = document.getElementById("test");
     p.innerHTML = "Hours cleared";
-    p.setAttribute("style","color:white");
+    p.setAttribute("style", "color:white");
+}
+
+function removeCell(id) {
+    var table = document.getElementById("curUser");
+    table.removeChild(id);
 }
