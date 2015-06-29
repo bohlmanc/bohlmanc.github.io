@@ -26,17 +26,19 @@
         <button onclick="removeSquare()">Remove Square</button>
         <canvas id="myCanvas" height="100" width="100" visibility="invisible">
     </div>
-    <p id="test" style="color:white">Sample Text</p>
-    <button onclick="showCodyHours()">Cody's Hours</button>
-    <button onclick="showDadHours()">Dad's Hours</button>
-    <button onclick="showMomHours()">Mom's Hours</button>
-    <button onclick="clearHours()">Clear Hours</button>
+    <p id="test" style="color:white">No hours</p>
+    <button onclick="reset()">Reset</button>
+    <button onclick="clearHours()">Clear</button>
     <table id="scores" style="width:50%,height:100px">
         <tr id="curUser">
-            <td>No Hours</td>
+
         </tr>
     </table>
     <button onclick="addCell()">Add Cell</button>
+
+    <div id="list">
+        <script src="scripts/populate.js"></script>
+    </div>
 
 </body>
 

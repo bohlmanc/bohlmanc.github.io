@@ -66,3 +66,20 @@ td {
 p {
     font-size: 20pt;
 }
+td:hover {
+    background-color: red;
+    cursor: pointer;
+}
+#list {
+    margin-left: 12%;
+    margin-right: 12%;
+    border-color: white;
+    border-style: outset;
+}
+#list < p {
+    margin-left: inherit;
+}
+hr {
+    border-style: ridge;
+    color: blanchedalmond;
+}
