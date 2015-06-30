@@ -2,6 +2,9 @@ var data = {
     myData: [
         ["Cody Bohlman", true, "The son"],
         ["Oliver Bohlman", true, "The father"],
+        ["Michelle Bohlman", false, "The mother"],
+        ["Cody Bohlman", true, "The son"],
+        ["Oliver Bohlman", true, "The father"],
         ["Michelle Bohlman", false, "The mother"]
     ],
     getNames: function () {
@@ -54,18 +57,19 @@ function main() {
         name.setAttribute("style", "color: white;");
         name.setAttribute("id", "title" + i + "");
 
+
         var description = document.createElement("p");
         description.innerHTML = descriptions[i];
-        //description.setAttribute("style", "font-size:14;float:right");
+        description.setAttribute("style", "font-size:16px ");
         description.setAttribute("id", "description" + i + "");
 
         var textContainer = document.createElement("div");
         textContainer.setAttribute("id", "textContainer" + i + "");
-        textContainer.setAttribute("style", "margin-left:15px;margin-right:15px;float:left");
+        textContainer.setAttribute("style", "margin-left:15px;margin-right:15px;background:transparent");
 
         var descriptionContainer = document.createElement("div");
         descriptionContainer.setAttribute("id", "descriptionContainer" + i + "");
-        //descriptionContainer.setAttribute("style", "margin-left:15px;margin-right:15px;float:right");
+        descriptionContainer.setAttribute("style", "margin-left:15px;margin-right:15px;background:transparent;height:inherit;width:inherit");
 
         if (i > 0) {
             var lineBreak = document.createElement("hr");

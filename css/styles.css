@@ -73,6 +73,7 @@ td:hover {
 #list {
     margin-left: 12%;
     margin-right: 12%;
+    margin-top: 5%;
     border-color: white;
     border-style: outset;
 }
