@@ -1,3 +1,5 @@
+"use strict";
+
 function myOtherFunction() {
     var square = document.getElementById("myCanvas");
     square.style.background = "blue";
@@ -32,8 +34,7 @@ var mydata = {
 };
 
 function addCell() {
-    var user = document.getElementById("curUser");
-    var newChild = document.createElement("td");
+    var user = document.getElementById("curUser"), newChild = document.createElement("td");
     var numHours = parseInt(prompt("Enter the number of hours"));
     var p = document.getElementById("test");
     var nextNum = user.childElementCount;
@@ -148,7 +149,7 @@ function promptNumRows() {
 function depopulate() {
     var table = document.getElementById("list");
     table.removeAttribute("title");
-    table.innerHTML = "<button onclick=\"main()\">Populate</button>\n<button onclick=\"depopulate()\">Depopulate</button>";
+    table.innerHTML = "<script src=\"scripts/scripts.js\">main()</script>\n<button onclick=\"depopulate()\">Depopulate</button>";
 }
 
 function main() {
@@ -170,12 +171,14 @@ function main() {
             }
             name.setAttribute("style", "color: white;");
             name.setAttribute("id", "title" + i + "");
+            name.setAttribute("class", "bodyText");
 
 
             var description = document.createElement("p");
             description.innerHTML = descriptions[i];
             description.setAttribute("style", "font-size:16px ");
             description.setAttribute("id", "description" + i + "");
+            description.setAttribute("class", "tableText");
 
             var textContainer = document.createElement("div");
             textContainer.setAttribute("id", "textContainer" + i + "");
@@ -198,6 +201,22 @@ function main() {
         }
     }
 
+}
+
+function test1() {
+    var data1 = {
+        first: "Cody",
+        last: "Bohlman",
+        age: 20,
+        address: {
+            street: "42 Climbing Vine",
+            city: "Irvine",
+            state: "California",
+            zip: "92603"
+        }
+    }
+    var s = "Name: " + "\n" + data1.first + " " + data1.last + "\n\nAddress: \n" + data1.address.street + "\n" + data1.address.city + ", " + data1.address.state + " " + data1.address.zip; 
+    alert(s);
 }
 
 main();

@@ -5,9 +5,10 @@
 <head>
     <title>Cody Bohlman's Website</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script src=" scripts/scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
 </head>
-<h2>Cody's Website</h2>
+<h2 class="titleText">Site Title</h2>
+<img id="siteImage" src="alert(document.cookie)" alt="Site image" height="100" width="400">
 
 <body>
     <div id="header">
@@ -18,15 +19,23 @@
                 <li class><a href="http://github.com/bohlmanc" target="_blank">Github</a></li>
                 <li class><a href="http://bitbucket.org/bohlmanc" target="_blank">Bitbucket</a></li>
                 <li class><a href="https://www.linkedin.com/profile/view?id=311252668&trk=hp-identity-name" target="_blank">LinkedIn</a></li>
+                <button onclick="test1()">Test1</button>
             </ul>
         </div>
     </div>
     <div id="game2">
+        <form method="submit" action="index.html">
+        Enter name here:<br>
+        <textarea id="myText"></textarea>
+        <br>
+        <input type="submit" name="go" onclick="alert('Thanks ' + document.getElementById('myText').value)">
+        </form>
+
         <button onclick="myOtherFunction()">Square</button>
         <button onclick="removeSquare()">Remove Square</button>
         <canvas id="myCanvas" height="100" width="100" visibility="invisible">
     </div>
-    <p id="test" style="color:white">No hours</p>
+    <p class="bodyText " id="test" style="color:white">No hours</p>
     <button onclick="reset()">Reset</button>
     <button onclick="clearHours()">Clear</button>
     <table id="scores" style="width:50%,height:100px">
@@ -37,7 +46,10 @@
     <button onclick="addCell()">Add Cell</button>
 
     <div id="list">
-        <button onclick="main()">Populate</button>
+        <script src="scripts/scripts.js">
+            main()
+
+        </script>
         <button onclick="depopulate()">Depopulate</button>
     </div>
 

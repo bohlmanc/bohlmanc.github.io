@@ -63,7 +63,7 @@ td {
 #test {
     text-align: center;
 }
-p {
+.bodyText {
     font-size: 20pt;
 }
 td:hover {
@@ -83,4 +83,15 @@ td:hover {
 hr {
     border-style: ridge;
     color: blanchedalmond;
+}
+#siteImage {
+    padding-left: 40px;
+    border-color: aliceblue;
+}
+.tableText {
+    font-size: 16pt;
+}
+.titleText {
+    padding-left: 40px;
+    font-size: 20pt;
 }
